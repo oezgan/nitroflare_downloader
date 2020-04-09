@@ -17,4 +17,5 @@ You can install them with pip:
 `
 python nitroflare_downloader.py {USERNAME} {PASSWORD} {SAVE TO DIRECTORY} {FULL PATH OF FILE dl.txt}
 `
+
 Directory to save should always end with \ or / 
