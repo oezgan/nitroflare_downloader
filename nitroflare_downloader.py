@@ -48,10 +48,9 @@ with open(sys.argv[4]) as fp:
         data = r.json()
         print("getDownloadLink : " + str(data))
         _dl_url = data["result"]["url"]
-        os.system("busybox wget -P "+PATH+" " + _dl_url + "")
-        print("dl url: " + _dl_url)
-        print("name" + data["result"]['name'])
-        print("PATH: " + PATH )
+        #print("dl url: " + _dl_url)
+        #print("name" + data["result"]['name'])
+        #print("PATH: " + PATH )
         # check if file exists and has the same size:
         if os.path.exists(PATH +data["result"]['name']):
             size = data["result"]['size']
@@ -64,3 +63,4 @@ with open(sys.argv[4]) as fp:
         wget.download(_dl_url, PATH +data["result"]['name'] )
         line = fp.readline()
         cnt += 1
+print("DONE!...Downloaded "+ str(cnt) + " files")
